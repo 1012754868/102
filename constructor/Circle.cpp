@@ -1,6 +1,6 @@
 #include "Circle.h"
 
-// class constructor
+// class constructor definition
 Circle::Circle() {
   _radius = 1.0;
 }
