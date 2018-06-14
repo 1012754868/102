@@ -6,7 +6,8 @@ Shape::Shape()
       _colour(Colour::RED),
       _line_type(LineType::SOLID),
       _origin({0, 0}),
-      _alpha(1.0) {}
+      _alpha(1.0),
+      _area(0.0) {}
 
 // mutator definitions
 void Shape::set_colour(Colour colour) { _colour = colour; }
@@ -21,7 +22,11 @@ void Shape::set_alpha(float alpha) {
   }
   _alpha = alpha;
 }
+// accessor
+float Shape::get_area() { return _area; }
+
 // drawing method
 void Shape::draw() {
-  std::cout << "Drawing " << _name << " at (" << _origin.x << "," << _origin.y << ")\n";
+  std::cout << "Drawing " << _name << " at (" << _origin.x << "," << _origin.y
+            << ")\n";
 }

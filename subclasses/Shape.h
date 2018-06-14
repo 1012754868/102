@@ -23,6 +23,8 @@ class Shape {
   void set_line_type(LineType type);
   void set_origin(Point2D origin);
   void set_alpha(float alpha);
+  // accessor for getting private member variables
+  float get_area();
   // method for drawing shape on screen
   void draw();
 
@@ -32,6 +34,7 @@ class Shape {
   LineType _line_type;
   Point2D _origin;
   float _alpha;
+  float _area;
 };
 
 #endif

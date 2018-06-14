@@ -2,16 +2,18 @@
 #define CIRCLE_H
 
 #include "Shape.h"
-#define PI 3.14159265
+#define PI 3.1415926535
 
-class Circle : Shape {
+class Circle : public Shape {
  public:
-  Circle();                       // constructor
-  void set_radius(float radius);  // mutator
-  float get_area();               // accessor
+  //constructor
+  Circle();
+  // mutator
+  void set_radius(float radius);
+  // accessor
+  float get_area();
  private:
   float _radius;
-  float _area;
 };
 
 #endif
