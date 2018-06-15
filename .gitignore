@@ -33,10 +33,7 @@
 
 # Mac Crap
 
-*.DS_Store
-
-# Clang
-.clang-format
+.DS_Store
 
 # VSCode
 

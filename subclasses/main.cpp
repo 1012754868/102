@@ -1,27 +1,37 @@
 #include <iostream>
-#include "Shape.h"
-#include "Circle.h"
+#include "Footballer.h"
+#include "Person.h"
 
 int main() {
-  // Create a basic shape object
-  Shape shape;
-  // Set some properties
-  shape.set_alpha(0.5);
-  shape.set_colour(Colour::BLUE);
-  shape.set_line_type(LineType::DASHED);
-  shape.set_origin({6, 7});
-  // Draw
-  shape.draw();
+  // create a 'default' Person object and set (mutate) some properties
+  Person my_friend;
+  my_friend.set_forename("Bruce");
+  my_friend.set_surname("Wayne");
+  my_friend.set_dob({25, Month::Dec, 1975});
+  // then use the accessors to print the details
+  std::cout << "My best friend is called " << my_friend.get_forename() << " "
+            << my_friend.get_surname() << ", who was born on "
+            << my_friend.get_dob() << ".\n";
 
-  // Now create a circle (that inherits from shape)
-  Circle circle;
-  circle.set_radius(2.0);
-  circle.set_origin({9, 9});
-  circle.set_colour(Colour::PURPLE);
-  circle.set_alpha(0.8);
-  circle.draw();
-  float circle_area = circle.get_area();
-  std::cout << "Circle area = " << circle_area << std::endl;
+  // now use contructor arguments to create another person with specific values
+  Person my_other_friend = {"Peter", "Rabbit", {30, Month::May, 2000}};
+  std::cout << "My other friend is called " << my_other_friend.get_forename()
+            << " " << my_other_friend.get_surname() << " and they were born on "
+            << my_other_friend.get_dob() << ".\n";
+
+  // Create a specific footballer
+  Footballer my_fav_player = {
+      "Wayne", "Rooney", {24, Month::Oct, 1985}, Position::Forward, 119, 53};
+  
+  std::cout << "My favourite footballer is " << my_fav_player.get_forename() << " " 
+            <<  my_fav_player.get_surname() << ". He has scored " << my_fav_player.get_goals()
+            << " goals in " << my_fav_player.get_appearances() << " appearances.\n";
+    
+  my_fav_player.played_game();
+  my_fav_player.scored();
+
+  std::cout << "He has now scored " << my_fav_player.get_goals()
+            << " goals in " << my_fav_player.get_appearances() << " appearances.\n";
 
   return 0;
 }
