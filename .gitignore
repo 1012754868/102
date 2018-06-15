@@ -34,3 +34,10 @@
 # Mac Crap
 
 *.DS_Store
+
+# Clang
+.clang-format
+
+# VSCode
+
+.vscode/
