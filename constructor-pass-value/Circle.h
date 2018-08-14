@@ -5,12 +5,12 @@
 
 class Circle {
  public:
-  Circle();                       // constructor
+  Circle(float radius);           // constructor with value
   void set_radius(float radius);  // mutator
   float get_area();               // accessor
  private:
   // member variables are private and set/get via accessor/mutator
-  float _radius = 1.0;
+  float _radius;
   float _area;
 };
 

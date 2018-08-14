@@ -1,8 +1,8 @@
 # Set compiler
-CC=g++
+CC=g++-8
 
 #Compile flags (-c to output object file .o)
-CFLAGS=-c -Wall -std=c++11
+CFLAGS=-c -Wall -std=c++11 -static-libstdc++
 
 all: main.exe
 

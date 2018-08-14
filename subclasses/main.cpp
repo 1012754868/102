@@ -20,18 +20,25 @@ int main() {
             << my_other_friend.get_dob() << ".\n";
 
   // Create a specific footballer
-  Footballer my_fav_player = {
-      "Wayne", "Rooney", {24, Month::Oct, 1985}, Position::Forward, 119, 53};
-  
-  std::cout << "My favourite footballer is " << my_fav_player.get_forename() << " " 
-            <<  my_fav_player.get_surname() << ". He has scored " << my_fav_player.get_goals()
-            << " goals in " << my_fav_player.get_appearances() << " appearances.\n";
-    
+  Footballer my_fav_player = {"Wayne",
+                              "Rooney",
+                              {24, Month::Oct, 1985},
+                              Position::Forward,
+                              "Washington DC",
+                              119,
+                              53};
+
+  std::cout << "My favourite footballer is " << my_fav_player.get_forename()
+            << " " << my_fav_player.get_surname() << ". He currently plays for "
+            << my_fav_player.get_club() << ". He has scored "
+            << my_fav_player.get_goals() << " goals in "
+            << my_fav_player.get_apps() << " appearances.\n";
+
   my_fav_player.played_game();
   my_fav_player.scored();
 
-  std::cout << "He has now scored " << my_fav_player.get_goals()
-            << " goals in " << my_fav_player.get_appearances() << " appearances.\n";
+  std::cout << "He has now scored " << my_fav_player.get_goals() << " goals in "
+            << my_fav_player.get_apps() << " appearances.\n";
 
   return 0;
 }

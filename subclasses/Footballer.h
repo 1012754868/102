@@ -11,27 +11,26 @@ class Footballer : public Person {
   // constructors
   Footballer();
   Footballer(std::string forename, std::string surname, Date dob,
-             Position position, int appearances, int goals);
+             Position position, std::string club, int apps, int goals);
   // mutators
   void set_club(std::string club);
   void set_position(Position position);
   void set_goals(int goals);
-  void set_appearances(int appearances);
+  void set_apps(int apps);
   // accessors
   std::string get_club();
   std::string get_position();
   int get_goals();
-  int get_appearances();
+  int get_apps();
   // member methods
   void scored();
   void played_game();
 
-
   // member variables
  private:
-  std::string _club;
   Position _position;
-  int _appearances;
+  std::string _club;
+  int _apps;
   int _goals;
 };
 #endif

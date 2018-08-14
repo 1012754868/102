@@ -1,6 +1,6 @@
 #include <iostream>
 
-// constants in the list are assigned integers: 0,1,2 etc. 
+// constants in the list are assigned integers: 0,1,2 etc.
 enum Vegetable { Potato, Carrot, Onion };
 enum Fruit { Apple, Banana, Pear };
 
@@ -9,7 +9,7 @@ int main() {
   Vegetable veg = Potato;
   Fruit fruit = Apple;
   // we can directly compare as they are essentially integers
-  if ( fruit == veg) {
+  if (fruit == veg) {
     std::cout << "The types are the same!\n";
   }
   return 0;
