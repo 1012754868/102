@@ -37,7 +37,13 @@ std::string Footballer::get_position() {
   }
 }
 // methods
-void Footballer::scored() { _goals++; }
-void Footballer::played_game() { _apps++; }
+void Footballer::scored() {
+  _goals++;
+  std::cout << "GOALLLLL!!!!!!!\n";
+}
+void Footballer::played_game() {
+  _apps++;
+  std::cout << "Played a game.\n";
+}
 
 // get them to add a hat trick method
